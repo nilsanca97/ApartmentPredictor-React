@@ -1,32 +1,6 @@
-// src/data/apartments.ts
+// src/data/apartments.js
 
-export interface Apartment {
-
-id: string;
-
-title: string;
-
-price: number;
-
-rooms: number;
-
-bathrooms: number;
-
-surface: number;
-
-location: string;
-
-description?: string;
-
-imageUrl?: string;
-
-interested?: boolean;
-
-createdAt: string;
-
-}
-
-export const initialApartments: Apartment[] = [
+export const initialApartments = [
 
 {
 

@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { initialApartments } from "./data/apartments";
 
 const ApartmentList = () => {
-  const [apartments, setApartments] = useState([]);
+  const [apartments, setApartments] = useState([initialApartments]);
   const [isLoading, setIsLoading] = useState(true);
   const [isAxiosError, setIsAxiosError] = useState(false);
 
+  /*
   useEffect(() => {
     const fetchApartments = async () => {
       try {
@@ -21,7 +23,8 @@ const ApartmentList = () => {
       }
     };
     fetchApartments();
-  }, []);
+  }, []); 
+  */
 
   return (
     <>
@@ -34,19 +37,16 @@ const ApartmentList = () => {
           {apartments.map((apartment) => (
             <li key={apartment.id}>
               <strong>ID:</strong> {apartment.id} <br />
+              <strong>Title:</strong> {apartment.title} <br />
               <strong>Price:</strong> {apartment.price} <br />
-              <strong>Area:</strong> {apartment.area} <br />
-              <strong>Bedrooms:</strong> {apartment.bedrooms} <br />
+              <strong>Rooms:</strong> {apartment.rooms} <br />
               <strong>Bathrooms:</strong> {apartment.bathrooms} <br />
-              <strong>Stories:</strong> {apartment.stories} <br />
-              <strong>Main Road:</strong> {apartment.mainroad} <br />
-              <strong>Guest Room:</strong> {apartment.guestroom} <br />
-              <strong>Basement:</strong> {apartment.basement} <br />
-              <strong>Hot Water Heating:</strong> {apartment.hotwaterheating} <br />
-              <strong>Air Conditioning:</strong> {apartment.airconditioning} <br />
-              <strong>Parking:</strong> {apartment.parking} <br />
-              <strong>Preferred Area:</strong> {apartment.prefarea} <br />
-              <strong>Furnishing Status:</strong> {apartment.furnishingstatus}
+              <strong>Surface:</strong> {apartment.surface} <br />
+              <strong>Location:</strong> {apartment.location} <br />
+              <strong>Description:</strong> {apartment.description} <br />
+              <strong>IMAGE:</strong> {apartment.imageUrl} <br />
+              <strong>Interested:</strong> {apartment.interested} <br />
+              <strong>Created at:</strong> {apartment.createdAt}
             </li>
           ))}
         </ul>
