@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { apartments } from "../data/apartments";
 import HomeListRender from "../components/HomeListRender";
 import ApartmentDetails from "../components/ApartmentDetails";
+import CustomizedTables from "../components/CustomizedTables";
 
 
 export default function Menu() {
@@ -22,7 +23,7 @@ export default function Menu() {
        {pageToRender === "HomeListRender" && <HomeListRender /> }
        {pageToRender === "ApartmentDetails" && <ApartmentDetails /> }
        {pageToRender === "CreateApartment" && <CreateApartment />}
-       
+       <CustomizedTables />
       </>
     );
 }

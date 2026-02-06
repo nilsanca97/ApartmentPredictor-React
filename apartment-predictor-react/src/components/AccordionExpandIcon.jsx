@@ -18,14 +18,14 @@ export default function AccordionExpandIcon({id, price, rooms, bathrooms, surfac
           aria-controls="panel2-content"
           id="panel2-header"
         >
-          <Typography component="span"> MORE DETAILS ABOUT ...</Typography>
+          <Typography component="span"> MORE DETAILS ABOUT THIS APARTMENT ({id})</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Hardcoded details from apartment. 
-            Averiguar como se pasa por props la info de apartment.
-            PRICE: {price}
-            nº ROOMS: {rooms}
+            <p> <b>DESCRIPTION: </b>{description} </p>
+            <p> <b>PRICE: </b>{price}€ </p>
+            <p> <b>nº of ROOMS: </b>{rooms} </p>
+
           </Typography>
         </AccordionDetails>
       </Accordion>

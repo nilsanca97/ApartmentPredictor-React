@@ -17,19 +17,18 @@ export default function ApartmentDetailsCard(props) {
             <CardActionArea>
                 <img
                     src= {apartment.imageUrl} 
-                    alt= {apartment.title}
-                   
+                    alt= {apartment.title}   
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {apartment.title}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        <b>DESCRIPTION: </b> {apartment.description}
-                        <p>PRICE: {apartment.price} €</p>
-                    </Typography>
                     <AccordionExpandIcon 
+                        id= {apartment.id}
+                        description={apartment.description}
                         price={apartment.price}
+                        rooms={apartment.rooms}
+
                     />
                 </CardContent>
             </CardActionArea>
