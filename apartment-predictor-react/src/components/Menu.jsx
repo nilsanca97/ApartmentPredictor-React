@@ -1,16 +1,28 @@
-import axios from "axios";
+//import axios from "axios";
 import { useEffect, useState } from "react";
-import { initialApartments } from "../data/apartments";
+import { apartments } from "../data/apartments";
+import HomeListRender from "../components/HomeListRender";
+import ApartmentDetails from "../components/ApartmentDetails";
+
 
 export default function Menu() {
-  const [apartments, setApartments] = useState([initialApartments]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isAxiosError, setIsAxiosError] = useState(false);
+    //const [apartments, setApartments] = useState([apartments]);
 
-  return (
-    <>
-      <h1>Apartments</h1>
-      <p>This is an exercise to test react render</p>
-    </>
-  );
-};
+    const [pageToRender, setPageToRender] = useState("HomeListRender");
+    const [showMore, setShowMore] = useState (false);
+  
+    return (
+      <>
+        <div>
+          <button onClick={() => setPageToRender("HomeListRender")}>HomeListRender</button>
+          <button onClick= {() => setPageToRender("ApartmentDetails")}>ApartmentDetails</button>
+          <button onClick= {() => setPageToRender("CreateApartment")}>CreateApartment</button>
+        </div>
+  
+       {pageToRender === "HomeListRender" && <HomeListRender /> }
+       {pageToRender === "ApartmentDetails" && <ApartmentDetails /> }
+       {pageToRender === "CreateApartment" && <CreateApartment />}
+       
+      </>
+    );
+}

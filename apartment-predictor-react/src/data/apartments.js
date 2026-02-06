@@ -1,6 +1,6 @@
 // src/data/apartments.js
 
-export const initialApartments = [
+export const apartments = [
 
 {
 
@@ -20,7 +20,7 @@ location: "Barcelona, Eixample Dreta",
 
 description: "Recently renovated, elevator, balcony.",
 
-imageUrl: "https://www.pexels.com/photo/courtyard-of-modern-villa-with-glass-walls-7031604/",
+imageUrl: "https://images.pexels.com/photos/7031604/pexels-photo-7031604.jpeg",
 
 interested: false,
 
@@ -46,9 +46,7 @@ location: "Barcelona, Poblenou",
 
 description: "Fully furnished, lots of natural light, close to public transport.",
 
-imageUrl: "https://www.pexels.com/photo/a-beach-house-with-palm-trees-and-the-ocean-in-the-background-19130093/",
-
-interested: true,
+imageUrl: "https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg",
 
 createdAt: "2026-01-20T14:45:00Z"
 
@@ -72,7 +70,7 @@ location: "Barcelona, Gràcia",
 
 description: "Open-plan loft, renovated kitchen, great terrace view.",
 
-imageUrl: "https://www.pexels.com/photo/white-roll-up-door-277667/",
+imageUrl: "https://images.pexels.com/photos/277667/pexels-photo-277667.jpeg",
 
 interested: false,
 
@@ -98,7 +96,7 @@ location: "Madrid, Chamberí",
 
 description: "Bright apartment, modern kitchen, close to metro.",
 
-imageUrl: "https://www.pexels.com/photo/contemporary-country-house-facade-in-winter-7031406/",
+imageUrl: "https://images.pexels.com/photos/7031406/pexels-photo-7031406.jpeg",
 
 interested: true,
 
@@ -124,7 +122,7 @@ location: "Granada, Albaicín",
 
 description: "Historic neighborhood, cozy interior, stunning views of the Alhambra.",
 
-imageUrl: "https://www.pexels.com/photo/cozy-loft-bedroom-with-wooden-ceiling-29976308/",
+imageUrl: "https://images.pexels.com/photos/29976308/pexels-photo-29976308.jpeg",
 
 interested: false,
 
