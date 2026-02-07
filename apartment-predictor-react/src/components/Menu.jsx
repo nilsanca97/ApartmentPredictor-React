@@ -23,7 +23,6 @@ export default function Menu() {
        {pageToRender === "HomeListRender" && <HomeListRender /> }
        {pageToRender === "ApartmentDetails" && <ApartmentDetails /> }
        {pageToRender === "CreateApartment" && <CreateApartment />}
-       <CustomizedTables />
       </>
     );
 }

@@ -26,42 +26,44 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     border: 0,
   },
 }));
+//APARTMENT ID, TITLE, PRICE, SURFACE, ROOMS
+/*function createData(id, title, price, surface, rooms) {
+  return { id, title, price, details, surface, rooms};
+}*/
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
+/*
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData({id}, {title}, {price},{surface},{rooms}),
+  createData({id}, {title}, {price},{surface},{rooms}),
+  createData({id}, {title}, {price},{surface},{rooms}),
+  createData({id}, {title}, {price},{surface},{rooms}),
+  createData({id}, {title}, {price},{surface},{rooms}),
 ];
+*/
 
-export default function CustomizedTables() {
+export default function CustomizedTables({apartments} = []) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Dessert (100g serving)</StyledTableCell>
-            <StyledTableCell align="right">Calories</StyledTableCell>
-            <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
-            <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
+            <StyledTableCell>APARTMENT_ID</StyledTableCell>
+            <StyledTableCell align="right">TITLE</StyledTableCell>
+            <StyledTableCell align="right">PRICE</StyledTableCell>
+            <StyledTableCell align="right">SURFACE</StyledTableCell>
+            <StyledTableCell align="right">ROOMS</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
+          {apartments.map((apartment) => (
+            <StyledTableRow key={apartment.id}>
               <StyledTableCell component="th" scope="row">
-                {row.name}
+                {apartment.id}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
-              <StyledTableCell align="right">{row.protein}</StyledTableCell>
+              <StyledTableCell align="right">{apartment.title}</StyledTableCell>
+              <StyledTableCell align="right">{apartment.price}</StyledTableCell>
+              <StyledTableCell align="right">{apartment.surface}</StyledTableCell>
+              <StyledTableCell align="right">{apartment.rooms}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

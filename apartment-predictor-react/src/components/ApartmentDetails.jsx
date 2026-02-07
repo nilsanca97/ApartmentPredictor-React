@@ -28,7 +28,6 @@ export default function ApartmentDetailsCard(props) {
                         description={apartment.description}
                         price={apartment.price}
                         rooms={apartment.rooms}
-
                     />
                 </CardContent>
             </CardActionArea>
