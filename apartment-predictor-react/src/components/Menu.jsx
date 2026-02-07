@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { apartments } from "../data/apartments";
 import HomeListRender from "../components/HomeListRender";
 import ApartmentDetails from "../components/ApartmentDetails";
-import CustomizedTables from "../components/CustomizedTables";
+import FormCreateApartment from "../components/FormCreateApartment";
 
 
 export default function Menu() {
@@ -17,12 +17,12 @@ export default function Menu() {
         <div>
           <button onClick={() => setPageToRender("HomeListRender")}>HomeListRender</button>
           <button onClick= {() => setPageToRender("ApartmentDetails")}>ApartmentDetails</button>
-          <button onClick= {() => setPageToRender("CreateApartment")}>CreateApartment</button>
+          <button onClick= {() => setPageToRender("FormCreateApartment")}>FormCreateApartment</button>
         </div>
   
        {pageToRender === "HomeListRender" && <HomeListRender /> }
        {pageToRender === "ApartmentDetails" && <ApartmentDetails /> }
-       {pageToRender === "CreateApartment" && <CreateApartment />}
+       {pageToRender === "FormCreateApartment" && <FormCreateApartment />}
       </>
     );
 }
