@@ -26,20 +26,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     border: 0,
   },
 }));
-//APARTMENT ID, TITLE, PRICE, SURFACE, ROOMS
-/*function createData(id, title, price, surface, rooms) {
-  return { id, title, price, details, surface, rooms};
-}*/
-
-/*
-const rows = [
-  createData({id}, {title}, {price},{surface},{rooms}),
-  createData({id}, {title}, {price},{surface},{rooms}),
-  createData({id}, {title}, {price},{surface},{rooms}),
-  createData({id}, {title}, {price},{surface},{rooms}),
-  createData({id}, {title}, {price},{surface},{rooms}),
-];
-*/
 
 export default function CustomizedTables({apartments} = []) {
   return (
@@ -48,7 +34,7 @@ export default function CustomizedTables({apartments} = []) {
         <TableHead>
           <TableRow>
             <StyledTableCell>APARTMENT_ID</StyledTableCell>
-            <StyledTableCell align="right">TITLE</StyledTableCell>
+            <StyledTableCell align="center">TITLE</StyledTableCell>
             <StyledTableCell align="right">PRICE</StyledTableCell>
             <StyledTableCell align="right">SURFACE</StyledTableCell>
             <StyledTableCell align="right">ROOMS</StyledTableCell>
@@ -60,10 +46,10 @@ export default function CustomizedTables({apartments} = []) {
               <StyledTableCell component="th" scope="row">
                 {apartment.id}
               </StyledTableCell>
-              <StyledTableCell align="right">{apartment.title}</StyledTableCell>
-              <StyledTableCell align="right">{apartment.price}</StyledTableCell>
-              <StyledTableCell align="right">{apartment.surface}</StyledTableCell>
-              <StyledTableCell align="right">{apartment.rooms}</StyledTableCell>
+              <StyledTableCell align="center">{apartment.title}</StyledTableCell>
+              <StyledTableCell align="center">{apartment.price} €</StyledTableCell>
+              <StyledTableCell align="center">{apartment.surface} m²</StyledTableCell>
+              <StyledTableCell align="center">{apartment.rooms}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>
