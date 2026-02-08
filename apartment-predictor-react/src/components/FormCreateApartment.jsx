@@ -9,19 +9,31 @@ export default function FormCreateApartment() {
   });
 
   function handleTitle(e) {
-    apartment.title = e.target.value;
+    setApartment({
+      ...apartment, 
+      title: e.target.value
+    });
   }
 
   function handlePrice(e) {
-    apartment.price= e.target.value;
+    setApartment({
+      ...apartment, 
+      price: e.target.value
+    });
   }
 
   function handleSurface(e) {
-    apartment.surface = e.target.value;
+    setApartment({
+      ...apartment,
+      surface: e.target.value
+    })
   }
 
   function handleRooms(e) {
-    apartment.rooms = e.target.value;
+    setApartment({
+      ...apartment, 
+      rooms: e.target.value
+    })
   }
 
   return (
