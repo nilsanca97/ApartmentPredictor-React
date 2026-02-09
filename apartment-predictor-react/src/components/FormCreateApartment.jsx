@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+ 
 export default function FormCreateApartment() {
   const [apartment, setApartment] = useState({
     title: "beautiful apartment",
