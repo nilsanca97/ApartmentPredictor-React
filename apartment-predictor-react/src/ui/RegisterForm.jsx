@@ -1,60 +1,6 @@
-import { useState } from "react";
-import HomeListRender from "../components/HomeListRender";
-import { apartments } from "../data/apartments";
-import CustomizedTables from "../ui/CustomizedTables"
 
-export default function RegisterForm() {
-  //const [isRegistered, setIsRegistered] = useState(false);
-  const [apartmentsList, setAparmentsList] = useState(apartments);
-  const [formData, setFormData] = useState({
-    id: "",
-    title: "",
-    price: "",
-    surface:"", 
-    rooms: "", 
-  });
-
-  /*if (isRegistered) {
-    return (
-      <>
-        <h4>
-          Apartment {apartmentsList.id} created sucessfull. Here below you have details of apartment
-          created.{" "}
-        </h4>{" "}
-        <b> TITLE: </b> {formData.title},
-        <b> PRICE: </b> {formData.price}, 
-        <b> SURFACE: </b> {formData.surface}, 
-        <b> ROOMS: </b> {formData.rooms}
-        <CustomizedTables
-          apartments= {apartmentsList}  
-        /> 
-      </>
-    );
-  }*/
-
-    function handleChange(e) {
-      setFormData({
-        ...formData, 
-        [e.target.name]: e.target.value
-      });
-    }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const idNewApt = apartmentsList.length +1;
-   
-    const newApartment = {
-      ...formData, 
-      id: idNewApt
-    };
-
-    setAparmentsList([
-      ...apartmentsList, 
-      newApartment
-    ]);
-
-    //setIsRegistered(true);
-  }
+export default function Form({formData}, {handleChange}, {handleSubmit}) {
+ 
   return (
     <>
       <h2>RegisterForm </h2>
@@ -83,9 +29,6 @@ export default function RegisterForm() {
                 <b> ROOMS: </b> {formData.rooms} 
             </p>
             <button type="submit">CREATE</button>
-            <CustomizedTables
-          apartments= {apartmentsList}  
-        />
         </form>
     </>
   );
