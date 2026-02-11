@@ -31,14 +31,48 @@ export default function RegisterForm() {
     );
   }
 
-  const handleChange = (e) => {
+  /*const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
     setAparments;
-  };
+  };*/
+  /*function handleChange(e) {
+    setFormData({
+        ...formData, 
+        [e.target.name]: e.target.value
+    });
+  }*/
+ function handleTitle(e) {
+    setFormData({
+      ...formData, 
+      title: e.target.value
+    });
+  }
+
+  function handlePrice(e) {
+    setFormData({
+      ...formData, 
+      price: e.target.value
+    });
+  }
+
+  function handleSurface(e) {
+    setFormData({
+      ...formData,
+      surface: e.target.value
+    })
+  }
+
+  function handleRooms(e) {
+    setFormData({
+      ...formData, 
+      rooms: e.target.value
+    })
+  }
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,41 +81,36 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="card">
-      <h2>RegisterForm1</h2>
-      <p> {apartments.title}</p>
+    <>
+    {/*<div className="card">*/}
+
+      {/*<h1>RegisterForm22 < /h1>*/}
       <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="username">Username</label>
-          <br />
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="username"
-            value={formData.username}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <div>
-          <label htmlFor="email">Email</label>
-          <br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <br />
-        <button type="submit">Register</button>
-      </form>
-    </div>
+        
+            <label>
+                Title:
+                <input value={formData.title} onChange={handleTitle} />
+            </label>
+            <label>
+                Price: 
+                <input value={formData.price} onChange={handlePrice} />
+            </label>
+            <label>
+                Surface:
+                <input value={formData.surface} onChange={handleSurface} />
+            </label>
+            <label>
+                Rooms:
+                <input value={formData.rooms} onChange={handleRooms} />
+            </label>
+            <p>
+                {formData.title}{', '} 
+                {formData.price}{'€ , '} 
+                {formData.surface}{'m2, '}
+                {formData.rooms}{' rooms'}
+            </p>
+            <button type="submit">CREATE</button>
+        </form>
+    </>
   );
 }
