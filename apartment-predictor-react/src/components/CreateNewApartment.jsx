@@ -1,11 +1,9 @@
-import { useState } from "react";
-import HomeListRender from "../components/HomeListRender";
-import { apartments } from "../data/apartments";
-import CustomizedTables from "../ui/CustomizedTables"
+import Form from "../ui/Form";
+import CustomizedTables from "../ui/CustomizedTables";
 
-export default function CreateNewApartment() {
+export default function CreateNewApartment({apartmentsList, setApartmentsList, formData, setFormData}) {
   //const [isRegistered, setIsRegistered] = useState(false);
-  const [apartmentsList, setAparmentsList] = useState(apartments);
+  const [apartmentsList, setApartmentsList] = useState(apartments);
   const [formData, setFormData] = useState({
     id: "",
     title: "",
@@ -48,7 +46,7 @@ export default function CreateNewApartment() {
       id: idNewApt
     };
 
-    setAparmentsList([
+    setApartmentsList([
       ...apartmentsList, 
       newApartment
     ]);
@@ -57,36 +55,14 @@ export default function CreateNewApartment() {
   }
   return (
     <>
-      <h2>RegisterForm </h2>
-      <form onSubmit={handleSubmit}>
-        
-            <label>
-                Title:
-                <input name="title" value={formData.title} onChange={handleChange} />
-            </label>
-            <label>
-                Price: 
-                <input name="price" value={formData.price} onChange={handleChange} />
-            </label>
-            <label>
-                Surface:
-                <input name="surface" value={formData.surface} onChange={handleChange} />
-            </label>
-            <label>
-                Rooms:
-                <input name="rooms" value={formData.rooms} onChange={handleChange} />
-            </label>
-            <p>
-                <b> TITLE: </b> {formData.title} <br />
-                <b> PRICE: </b> {formData.price} <br />
-                <b> SURFACE: </b> {formData.surface} <br />
-                <b> ROOMS: </b> {formData.rooms} 
-            </p>
-            <button type="submit">CREATE</button>
-            <CustomizedTables
-          apartments= {apartmentsList}  
-        />
-        </form>
-    </>
+      <Form 
+        formData = {formData}
+        handleChange = {handleChange}
+        handleSubmit = {handleSubmit}
+      />  
+      <CustomizedTables
+        apartmentsList = {apartmentsList}
+      />
+    </>  
   );
 }
