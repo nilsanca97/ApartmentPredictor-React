@@ -1,13 +1,12 @@
 import { useState } from "react";
+import HomeListRender from "./HomeListRender";
+import { apartments } from "../data/apartments";
+import CustomizedTables from "../components/CustomizedTables"
 
-const initialApartments = [
-  { id: 0, name: "test apartment 0", price: "100€" },
-  { id: 1, name: "Bright flat in Eixample", price: "80€" },
-  { id: 2, name: "Cozy apartment near the beach", price: "500€" },
-];
 export default function RegisterForm() {
+  //let idNewApartment = 5++;
   const [isRegistered, setIsRegistered] = useState(false);
-  const [apartments, setAparments] = useState(initialApartments);
+  const [apartmentsList, setAparmentsList] = useState(apartments);
   const [formData, setFormData] = useState({
     id: "",
     title: "",
@@ -16,20 +15,23 @@ export default function RegisterForm() {
     rooms: "", 
   });
 
-  if (isRegistered) {
+  /*if (isRegistered) {
     return (
       <>
         <h4>
-          Apartment {formData.id} created sucessfull. Here below you have details of apartment
+          Apartment {apartmentsList.id} created sucessfull. Here below you have details of apartment
           created.{" "}
         </h4>{" "}
         <b> TITLE: </b> {formData.title},
         <b> PRICE: </b> {formData.price}, 
         <b> SURFACE: </b> {formData.surface}, 
         <b> ROOMS: </b> {formData.rooms}
+        <CustomizedTables
+          apartments= {apartmentsList}  
+        /> 
       </>
     );
-  }
+  }*/
 
   /*const handleChange = (e) => {
     const { name, value } = e.target;
@@ -76,15 +78,23 @@ export default function RegisterForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted with:", formData);
-    setIsRegistered(true);
-  };
+    const idNewApt = apartmentsList.length +1;
+   
+    const newApartment = {
+      ...formData, 
+      id: idNewApt
+    };
 
+    setAparmentsList([
+      ...apartmentsList, 
+      newApartment
+    ]);
+
+    //setIsRegistered(true);
+  }
   return (
     <>
-    {/*<div className="card">*/}
-
-      {/*<h1>RegisterForm22 < /h1>*/}
+      <h2>RegisterForm </h2>
       <form onSubmit={handleSubmit}>
         
             <label>
@@ -104,12 +114,15 @@ export default function RegisterForm() {
                 <input value={formData.rooms} onChange={handleRooms} />
             </label>
             <p>
-                {formData.title}{', '} 
-                {formData.price}{'€ , '} 
-                {formData.surface}{'m2, '}
-                {formData.rooms}{' rooms'}
+                <b> TITLE: </b> {formData.title} <br />
+                <b> PRICE: </b> {formData.price} <br />
+                <b> SURFACE: </b> {formData.surface} <br />
+                <b> ROOMS: </b> {formData.rooms} 
             </p>
             <button type="submit">CREATE</button>
+            <CustomizedTables
+          apartments= {apartmentsList}  
+        />
         </form>
     </>
   );
