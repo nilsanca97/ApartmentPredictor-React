@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
-import AccordionExpandIcon from "../components/AccordionExpandIcon";
+import AccordionExpandIcon from "../ui/AccordionExpandIcon";
 
 export default function ApartmentDetailsCard(props) {
     

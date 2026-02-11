@@ -5,7 +5,7 @@ import HomeListRender from "../components/HomeListRender";
 import ApartmentDetails from "../components/ApartmentDetails";
 import FormCreateApartment from "../components/FormCreateApartment";
 import ListWithForm from "../components/ListWithForm";
-import RegisterForm from "../components/RegisterForm";
+import RegisterForm from "../ui/RegisterForm";
 
 
 export default function Menu() {

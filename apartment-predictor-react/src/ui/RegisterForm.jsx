@@ -1,7 +1,7 @@
 import { useState } from "react";
-import HomeListRender from "./HomeListRender";
+import HomeListRender from "../components/HomeListRender";
 import { apartments } from "../data/apartments";
-import CustomizedTables from "../components/CustomizedTables"
+import CustomizedTables from "../ui/CustomizedTables"
 
 export default function RegisterForm() {
   //const [isRegistered, setIsRegistered] = useState(false);
