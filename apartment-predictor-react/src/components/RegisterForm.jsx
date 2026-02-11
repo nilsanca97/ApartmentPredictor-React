@@ -4,8 +4,7 @@ import { apartments } from "../data/apartments";
 import CustomizedTables from "../components/CustomizedTables"
 
 export default function RegisterForm() {
-  //let idNewApartment = 5++;
-  const [isRegistered, setIsRegistered] = useState(false);
+  //const [isRegistered, setIsRegistered] = useState(false);
   const [apartmentsList, setAparmentsList] = useState(apartments);
   const [formData, setFormData] = useState({
     id: "",
@@ -33,48 +32,12 @@ export default function RegisterForm() {
     );
   }*/
 
-  /*const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-    setAparments;
-  };*/
-  /*function handleChange(e) {
-    setFormData({
+    function handleChange(e) {
+      setFormData({
         ...formData, 
         [e.target.name]: e.target.value
-    });
-  }*/
- function handleTitle(e) {
-    setFormData({
-      ...formData, 
-      title: e.target.value
-    });
-  }
-
-  function handlePrice(e) {
-    setFormData({
-      ...formData, 
-      price: e.target.value
-    });
-  }
-
-  function handleSurface(e) {
-    setFormData({
-      ...formData,
-      surface: e.target.value
-    })
-  }
-
-  function handleRooms(e) {
-    setFormData({
-      ...formData, 
-      rooms: e.target.value
-    })
-  }
-
+      });
+    }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -99,19 +62,19 @@ export default function RegisterForm() {
         
             <label>
                 Title:
-                <input value={formData.title} onChange={handleTitle} />
+                <input name="title" value={formData.title} onChange={handleChange} />
             </label>
             <label>
                 Price: 
-                <input value={formData.price} onChange={handlePrice} />
+                <input name="price" value={formData.price} onChange={handleChange} />
             </label>
             <label>
                 Surface:
-                <input value={formData.surface} onChange={handleSurface} />
+                <input name="surface" value={formData.surface} onChange={handleChange} />
             </label>
             <label>
                 Rooms:
-                <input value={formData.rooms} onChange={handleRooms} />
+                <input name="rooms" value={formData.rooms} onChange={handleChange} />
             </label>
             <p>
                 <b> TITLE: </b> {formData.title} <br />
