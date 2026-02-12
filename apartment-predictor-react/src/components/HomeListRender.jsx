@@ -1,5 +1,5 @@
 //import { initialApartments } from "../data/apartments";
-/*import CustomizedTables from "../ui/CustomizedTables"
+import CustomizedTables from "../ui/CustomizedTables"
 
 export default function HomeListRender({ apartments = []}) {
     console.log("Apartments en HomeListRender:", apartments);
@@ -12,17 +12,4 @@ export default function HomeListRender({ apartments = []}) {
             />          
         </>
     );
-}*/
-// HomeListRender.jsx
-export default function HomeListRender({ apartments = [] }) {
-  return (
-    <div>
-      <h2>HOME LIST RENDER</h2>
-      {apartments.map((apt) => (
-        <div key={apt.id}>
-          {apt.title} - {apt.price}€
-        </div>
-      ))}
-    </div>
-  );
 }
