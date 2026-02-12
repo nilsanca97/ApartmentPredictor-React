@@ -56,7 +56,7 @@ import { initialApartments } from "../data/apartments";
 import HomeListRender from "../components/HomeListRender";
 import ApartmentDetails from "../components/ApartmentDetails";
 import CreateNewApartment from "../components/CreateNewApartment";
-
+import DeleteApartment from "../components/DeleteApartment";
 
 export default function Menu() {
   // Hook useState to manage (control) the state of apartments (data, information)
@@ -68,7 +68,7 @@ export default function Menu() {
   return (
       <>
         <h1>MENU WORKS CORRECTLY</h1>
-        <p>Add new button CreateNewApartment</p>
+        <p>Add new button DeleteApartment</p>
 
           <button onClick={() => setPageToRender("HomeListRender")}>
             HomeListRender
@@ -78,6 +78,9 @@ export default function Menu() {
           </button>
           <button onClick={() => setPageToRender("CreateNewApartment")}>
             CreateNewApartment
+          </button>
+          <button onClick={() => setPageToRender("DeleteApartment")}>
+            DeleteApartment
           </button>
         <p>Page selected: {pageToRender} </p>
         
@@ -90,6 +93,9 @@ export default function Menu() {
         )}
         {pageToRender === "CreateNewApartment" && (
           <CreateNewApartment apartments={apartments} />
+        )}
+        {pageToRender === "DeleteApartment" && (
+          <DeleteApartment apartments={apartments} />
         )}
       </>
   );

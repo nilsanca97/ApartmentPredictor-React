@@ -1,14 +1,8 @@
 import { useState } from "react";
 //import { apartments } from "../data/apartments";
 
-let initialApartments = [
-  { id: 0, title: "Marta Colvin Andrade" },
-  { id: 1, title: "Lamidi Olonade Fakeye" },
-  { id: 2, title: "Louise Nevelson" },
-];
-
-export default function DeleteApartment() {
-  const [apartments, setAparments] = useState(initialApartments);
+export default function DeleteApartment({ apartments = []}) {
+  //const [apartments, setAparments] = useState(initialApartments);
 
   return (
     <>
