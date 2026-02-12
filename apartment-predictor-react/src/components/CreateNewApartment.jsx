@@ -4,7 +4,7 @@ import { useState } from "react";
 import Form from "../ui/Form";
 import CustomizedTables from "../ui/CustomizedTables"
 
-export default function CreateNewApartment({apartments, setAparments}) {
+export default function CreateNewApartment({apartments, setApartments}) {
   //const [isRegistered, setIsRegistered] = useState(false);
   //const [apartments, setAparments] = useState(initialApartments);
   const [formData, setFormData] = useState({
@@ -31,7 +31,7 @@ export default function CreateNewApartment({apartments, setAparments}) {
       id: idNewApt
     };
 
-    setAparments([
+    setApartments([
       ...apartments, 
       newApartment
     ]);

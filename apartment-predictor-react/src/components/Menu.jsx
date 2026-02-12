@@ -1,55 +1,3 @@
-/*//import axios from "axios";
-//import { useEffect} from "react";
-import { useState } from "react";
-import { initialApartments } from "../data/apartments";
-
-import HomeListRender from "../components/HomeListRender";
-import ApartmentDetails from "../components/ApartmentDetails";
-/*import FormCreateApartment from "../components/FormCreateApartment";
-import ListWithForm from "../components/ListWithForm";
-import CreateNewApartment from "../components/CreateNewApartment";
-import DeleteApartment from "../components/DeleteApartment";*/
-//import RegisterForm from "../components/RegisterForm";
-
-
-/*export default function Menu() {
-    const [apartments, setApartments] = useState(initialApartments);
-    const [pageToRender, setPageToRender] = useState("HomeListRender");
-    //const [showMore, setShowMore] = useState (false);
-  
-    {/*return (
-      <>
-        <div>
-          <button onClick={() => setPageToRender("HomeListRender")}>HomeListRender</button>
-          <button onClick= {() => setPageToRender("ApartmentDetails")}>ApartmentDetails</button>
-          {/*<button onClick= {() => setPageToRender("FormCreateApartment")}>FormCreateApartment</button>
-          <button onClick= {() => setPageToRender("ListWithForm")}>ListWithForm</button>
-          <button onClick= {() => setPageToRender("CreateNewApartment")}>CreateNewApartment</button>
-          <button onClick= {() => setPageToRender("DeleteApartment")}>DeleteApartment</button>*/
-        /*</div>}
-  
-        {/*{pageToRender === "HomeListRender" && (
-          <>
-            {console.log("Renderizando HomeListRender")}
-            <HomeListRender apartments={apartments} /> 
-          </>
-        )}*/
-        /*{pageToRender === "HomeListRender" && (
-          <div style={{color:"red"}}>TEST MENU FUNCIONA</div>
-        )}
-
-
-        {pageToRender === "ApartmentDetails" && (
-          <ApartmentDetails apartments={apartments}/> 
-        )}
-        {/*{pageToRender === "FormCreateApartment" && <FormCreateApartment />}
-        {pageToRender === "ListWithForm" && <ListWithForm />}
-        {pageToRender === "CreateNewApartment" && <CreateNewApartment />}
-        {pageToRender === "DeleteApartment" && <DeleteApartment />}*/
-      /*</>
-    );
-}*/
-
 import { useState } from "react";
 import { initialApartments } from "../data/apartments";
 
@@ -82,7 +30,7 @@ export default function Menu() {
           <button onClick={() => setPageToRender("DeleteApartment")}>
             DeleteApartment
           </button>
-        <p>Page selected: {pageToRender} </p>
+        <p>Page/ functionality selected: {pageToRender} </p>
         
         {/* Conditional Render with PROPS */}
         {pageToRender === "ShowApartments" && (
@@ -94,11 +42,14 @@ export default function Menu() {
         {pageToRender === "CreateNewApartment" && (
           <CreateNewApartment 
             apartments={apartments} 
-            setAparments={setApartments}  
+            setApartments={setApartments}  
           />
         )}
         {pageToRender === "DeleteApartment" && (
-          <DeleteApartment apartments={apartments} />
+          <DeleteApartment 
+            apartments={apartments} 
+            setApartments={setApartments} 
+          />
         )}
       </>
   );
