@@ -42,7 +42,7 @@ export default function CreateNewApartment({apartments, setApartments}) {
   
   return (
     <>
-      <h2>CREATE NEW APARTMENT</h2>
+      <h2>Create new apartment</h2>
       <p>Field the form to create a new apartment</p>
       <Form 
         formData= {formData}

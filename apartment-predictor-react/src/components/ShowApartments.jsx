@@ -6,7 +6,7 @@ export default function ShowApartments({ apartments = []}) {
     return (
         <>
             <h2>Show Apartments</h2>
-            <p>Here you can see (READ) a table of all apartments</p>
+            <p>Here you can see (READ) the basic information about all apartment (in table format)</p>
             <CustomizedTables
                 apartments= {apartments}  
             />          

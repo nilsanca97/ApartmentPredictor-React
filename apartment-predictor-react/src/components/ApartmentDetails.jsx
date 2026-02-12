@@ -76,7 +76,9 @@ export default function ApartmentDetails({ apartments = [] }) {
 
   return (
     <>
-        {detailsListItems}
+      <h2>More details about apartments</h2>
+      <p>Here you can see more details about all apartments (in card format)</p>
+      {detailsListItems}
     </>
   );
 }

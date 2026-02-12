@@ -6,6 +6,7 @@ export default function DeleteApartment({apartments, setApartments}) {
 
   return (
     <>
+      <h2>Delete apartment</h2>
       <p> Click the button to delete the desired apartment</p>
       <ul>
         {apartments.map((apartment) => (
