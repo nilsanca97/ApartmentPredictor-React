@@ -92,7 +92,10 @@ export default function Menu() {
           <ApartmentDetails apartments={apartments} />
         )}
         {pageToRender === "CreateNewApartment" && (
-          <CreateNewApartment apartments={apartments} />
+          <CreateNewApartment 
+            apartments={apartments} 
+            setAparments={setApartments}  
+          />
         )}
         {pageToRender === "DeleteApartment" && (
           <DeleteApartment apartments={apartments} />

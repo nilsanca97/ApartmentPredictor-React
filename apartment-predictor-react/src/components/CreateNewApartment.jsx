@@ -1,12 +1,12 @@
 import { useState } from "react";
-import HomeListRender from "./HomeListRender";
-import { initialApartments } from "../data/apartments";
+//import HomeListRender from "./HomeListRender";
+//import { initialApartments } from "../data/apartments";
 import Form from "../ui/Form";
 import CustomizedTables from "../ui/CustomizedTables"
 
-export default function CreateNewApartment() {
+export default function CreateNewApartment({apartments, setAparments}) {
   //const [isRegistered, setIsRegistered] = useState(false);
-  const [apartments, setAparments] = useState(initialApartments);
+  //const [apartments, setAparments] = useState(initialApartments);
   const [formData, setFormData] = useState({
     id: "",
     title: "",
