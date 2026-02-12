@@ -55,6 +55,8 @@ import { initialApartments } from "../data/apartments";
 
 import HomeListRender from "../components/HomeListRender";
 import ApartmentDetails from "../components/ApartmentDetails";
+import CreateNewApartment from "../components/CreateNewApartment";
+
 
 export default function Menu() {
   // Hook useState to manage (control) the state of apartments (data, information)
@@ -66,13 +68,16 @@ export default function Menu() {
   return (
       <>
         <h1>MENU WORKS CORRECTLY</h1>
-        <p>Step 4: Pass real data 'apartments' to children component ApartmentDetails</p>
+        <p>Add new button CreateNewApartment</p>
 
           <button onClick={() => setPageToRender("HomeListRender")}>
             HomeListRender
           </button>
           <button onClick={() => setPageToRender("ApartmentDetails")}>
             ApartmentDetails
+          </button>
+          <button onClick={() => setPageToRender("CreateNewApartment")}>
+            CreateNewApartment
           </button>
         <p>Page selected: {pageToRender} </p>
         
@@ -82,6 +87,9 @@ export default function Menu() {
         )}
         {pageToRender === "ApartmentDetails" && (
           <ApartmentDetails apartments={apartments} />
+        )}
+        {pageToRender === "CreateNewApartment" && (
+          <CreateNewApartment apartments={apartments} />
         )}
       </>
   );

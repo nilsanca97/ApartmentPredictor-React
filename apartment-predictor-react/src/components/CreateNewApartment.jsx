@@ -36,9 +36,10 @@ export default function CreateNewApartment() {
       newApartment
     ]);
     alert('Your new apartment is created sucessfully');
-
+    
     //setIsRegistered(true);
   }
+  
   return (
     <>
       <Form 
