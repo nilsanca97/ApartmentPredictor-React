@@ -51,17 +51,22 @@ import DeleteApartment from "../components/DeleteApartment";*/
 }*/
 
 import { useState } from "react";
+import { initialApartments } from "../data/apartments";
+
 import HomeListRender from "../components/HomeListRender";
 import ApartmentDetails from "../components/ApartmentDetails";
 
 export default function Menu() {
+  // Hook useState to manage (control) the state of apartments (data, information)
+  const [apartments, setApartments] = useState(initialApartments);
+
   // Hook useState to manage the page to render 
   const [pageToRender, setPageToRender] = useState("HomeListRender");
 
   return (
       <>
         <h1>MENU WORKS CORRECTLY</h1>
-        <p>Step 3: Render children depends on pageToRender 'HomeListRender' or 'ApartmentDetails'</p>
+        <p>Step 4: Pass real data 'apartments' to children components: HomeListRender & ApartmentDetails</p>
 
           <button onClick={() => setPageToRender("HomeListRender")}>
             HomeListRender
@@ -70,9 +75,14 @@ export default function Menu() {
             ApartmentDetails
           </button>
         <p>Page selected: {pageToRender} </p>
-        {/* Conditional Render */}
-        {pageToRender === "HomeListRender" && <HomeListRender />}
-        {pageToRender === "ApartmentDetails" && <ApartmentDetails />}
+        
+        {/* Conditional Render with PROPS */}
+        {pageToRender === "HomeListRender" && (
+          <HomeListRender apartments={apartments} />
+        )}
+        {pageToRender === "ApartmentDetails" && (
+          <ApartmentDetails apartments={apartments} />
+        )}
       </>
   );
 }

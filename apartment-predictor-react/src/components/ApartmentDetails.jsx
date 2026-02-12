@@ -43,6 +43,15 @@ export default function ApartmentDetailsCard({ apartments = []}) {
     );
 }*/
 // ApartmentDetails.jsx
-export default function ApartmentDetails() {
-  return <p>APARTMENT DETAILS renders this text</p>;
+export default function ApartmentDetails({ apartments = [] }) {
+  return (
+    <div>
+      <h2>APARTMENT DETAILS</h2>
+      {apartments.map((apt) => (
+        <div key={apt.id}>
+          {apt.title} - {apt.rooms} rooms
+        </div>
+      ))}
+    </div>
+  );
 }

@@ -14,6 +14,15 @@ export default function HomeListRender({ apartments = []}) {
     );
 }*/
 // HomeListRender.jsx
-export default function HomeListRender() {
-  return <p>HOME LIST RENDER renders this text. </p>;
+export default function HomeListRender({ apartments = [] }) {
+  return (
+    <div>
+      <h2>HOME LIST RENDER</h2>
+      {apartments.map((apt) => (
+        <div key={apt.id}>
+          {apt.title} - {apt.price}€
+        </div>
+      ))}
+    </div>
+  );
 }
