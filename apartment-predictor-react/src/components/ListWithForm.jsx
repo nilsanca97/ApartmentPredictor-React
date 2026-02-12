@@ -4,7 +4,7 @@ import FormCreateApartment from "./FormCreateApartment";
 import { useState } from "react";
 import { Apartment } from "@mui/icons-material";
 import { apartments } from "../data/apartments";
-import CustomizedTables from "../components/CustomizedTables"
+import CustomizedTables from "../ui/CustomizedTables"
 
 //import HomeListRenderWithForm from "../components/HomeListRenderWithForm";
 

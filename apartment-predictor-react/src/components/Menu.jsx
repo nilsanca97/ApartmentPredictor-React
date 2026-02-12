@@ -5,7 +5,8 @@ import HomeListRender from "../components/HomeListRender";
 import ApartmentDetails from "../components/ApartmentDetails";
 import FormCreateApartment from "../components/FormCreateApartment";
 import ListWithForm from "../components/ListWithForm";
-import RegisterForm from "../components/RegisterForm";
+import CreateNewApartment from "../components/CreateNewApartment";
+//import RegisterForm from "../components/RegisterForm";
 
 
 export default function Menu() {
@@ -21,14 +22,14 @@ export default function Menu() {
           <button onClick= {() => setPageToRender("ApartmentDetails")}>ApartmentDetails</button>
           <button onClick= {() => setPageToRender("FormCreateApartment")}>FormCreateApartment</button>
           <button onClick= {() => setPageToRender("ListWithForm")}>ListWithForm</button>
-          <button onClick= {() => setPageToRender("RegisterForm")}>RegisterForm</button>
+          <button onClick= {() => setPageToRender("CreateNewApartment")}>CreateNewApartment</button>
         </div>
   
        {pageToRender === "HomeListRender" && <HomeListRender /> }
        {pageToRender === "ApartmentDetails" && <ApartmentDetails /> }
        {pageToRender === "FormCreateApartment" && <FormCreateApartment />}
        {pageToRender === "ListWithForm" && <ListWithForm />}
-       {pageToRender === "RegisterForm" && <RegisterForm />}
+       {pageToRender === "CreateNewApartment" && <CreateNewApartment />}
       </>
     );
 }
