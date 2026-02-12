@@ -61,7 +61,7 @@ export default function Menu() {
   return (
       <>
         <h1>MENU WORKS CORRECTLY</h1>
-        <p>Paso 2: Add button to change the page </p>
+        <p>Step 3: Render children depends on pageToRender 'HomeListRender' or 'ApartmentDetails'</p>
 
           <button onClick={() => setPageToRender("HomeListRender")}>
             HomeListRender
@@ -70,6 +70,9 @@ export default function Menu() {
             ApartmentDetails
           </button>
         <p>Page selected: {pageToRender} </p>
+        {/* Conditional Render */}
+        {pageToRender === "HomeListRender" && <HomeListRender />}
+        {pageToRender === "ApartmentDetails" && <ApartmentDetails />}
       </>
   );
 }

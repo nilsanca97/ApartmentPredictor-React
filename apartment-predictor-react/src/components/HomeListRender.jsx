@@ -1,5 +1,5 @@
 //import { initialApartments } from "../data/apartments";
-import CustomizedTables from "../ui/CustomizedTables"
+/*import CustomizedTables from "../ui/CustomizedTables"
 
 export default function HomeListRender({ apartments = []}) {
     console.log("Apartments en HomeListRender:", apartments);
@@ -12,4 +12,8 @@ export default function HomeListRender({ apartments = []}) {
             />          
         </>
     );
+}*/
+// HomeListRender.jsx
+export default function HomeListRender() {
+  return <p>HOME LIST RENDER renders this text. </p>;
 }
