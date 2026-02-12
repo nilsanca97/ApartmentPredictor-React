@@ -1,7 +1,7 @@
-import { useState } from "react";
+//import { useState } from "react";
 //import { apartments } from "../data/apartments";
 
-export default function DeleteApartment({ apartments = []}) {
+export default function DeleteApartment({apartments, setApartments}) {
   //const [apartments, setAparments] = useState(initialApartments);
 
   return (
@@ -16,7 +16,7 @@ export default function DeleteApartment({ apartments = []}) {
             {apartment.title}{" "}
             <button
               onClick={() => {
-                setAparments(apartments.filter((a) => a.id !== apartment.id));
+                setApartments(apartments.filter((a) => a.id !== apartment.id));
               }}
             >
               Delete
