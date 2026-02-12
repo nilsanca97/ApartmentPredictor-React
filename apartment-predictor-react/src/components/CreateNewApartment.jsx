@@ -35,6 +35,7 @@ export default function CreateNewApartment() {
       ...apartmentsList, 
       newApartment
     ]);
+    alert('Your new apartment is created sucessfully');
 
     //setIsRegistered(true);
   }
