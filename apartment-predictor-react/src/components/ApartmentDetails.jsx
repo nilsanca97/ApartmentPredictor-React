@@ -1,17 +1,18 @@
-import { apartments } from "../data/apartments";
+//import { initialApartments } from "../data/apartments";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 import AccordionExpandIcon from "../ui/AccordionExpandIcon";
 
-export default function ApartmentDetailsCard(props) {
+export default function ApartmentDetailsCard({ apartments = []}) {
     
     /*const idApartmentToFilter = props.id;
     const detailsToRender = initialApartments.filter(
         (apartment) => apartment.id === idApartmentToFilter
     );
     */
+    console.log("Apartments recibidos:", apartments);
     const detailsListItems = apartments.map((apartment) => (
         <Card key= {apartment.id} sx={{ maxWidth: 345 }}>
             <CardActionArea>

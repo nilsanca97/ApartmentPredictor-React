@@ -1,6 +1,6 @@
 // src/data/apartments.js
 
-export const apartments = [
+export const initialApartments = [
 
 {
 

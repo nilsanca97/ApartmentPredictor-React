@@ -1,12 +1,12 @@
 import { useState } from "react";
 import HomeListRender from "./HomeListRender";
-import { apartments } from "../data/apartments";
+import { initialApartments } from "../data/apartments";
 import Form from "../ui/Form";
 import CustomizedTables from "../ui/CustomizedTables"
 
 export default function CreateNewApartment() {
   //const [isRegistered, setIsRegistered] = useState(false);
-  const [apartmentsList, setAparmentsList] = useState(apartments);
+  const [apartments, setAparments] = useState(initialApartments);
   const [formData, setFormData] = useState({
     id: "",
     title: "",
@@ -24,15 +24,15 @@ export default function CreateNewApartment() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const idNewApt = apartmentsList.length +1;
+    const idNewApt = apartments.length +1;
    
     const newApartment = {
       ...formData, 
       id: idNewApt
     };
 
-    setAparmentsList([
-      ...apartmentsList, 
+    setAparments([
+      ...apartments, 
       newApartment
     ]);
     alert('Your new apartment is created sucessfully');
@@ -47,7 +47,7 @@ export default function CreateNewApartment() {
         handleSubmit= {handleSubmit}  
       />
       <CustomizedTables
-        apartments= {apartmentsList}
+        apartments= {apartments}
       />
     </>
   );

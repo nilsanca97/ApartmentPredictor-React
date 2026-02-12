@@ -1,8 +1,8 @@
-import { apartments } from "../data/apartments";
+//import { initialApartments } from "../data/apartments";
 import CustomizedTables from "../ui/CustomizedTables"
 
-export default function HomeListRender() {
-
+export default function HomeListRender({ apartments = []}) {
+    console.log("Apartments en HomeListRender:", apartments);
     return (
         <>
             <h1>Apartments</h1>

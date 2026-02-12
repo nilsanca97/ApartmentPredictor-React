@@ -1,38 +1,76 @@
-//import axios from "axios";
-import { useEffect, useState } from "react";
-import { apartments } from "../data/apartments";
+/*//import axios from "axios";
+//import { useEffect} from "react";
+import { useState } from "react";
+import { initialApartments } from "../data/apartments";
+
 import HomeListRender from "../components/HomeListRender";
 import ApartmentDetails from "../components/ApartmentDetails";
-import FormCreateApartment from "../components/FormCreateApartment";
+/*import FormCreateApartment from "../components/FormCreateApartment";
 import ListWithForm from "../components/ListWithForm";
 import CreateNewApartment from "../components/CreateNewApartment";
-import DeleteApartment from "../components/DeleteApartment";
+import DeleteApartment from "../components/DeleteApartment";*/
 //import RegisterForm from "../components/RegisterForm";
 
 
-export default function Menu() {
-    //const [apartments, setApartments] = useState([apartments]);
-
+/*export default function Menu() {
+    const [apartments, setApartments] = useState(initialApartments);
     const [pageToRender, setPageToRender] = useState("HomeListRender");
-    const [showMore, setShowMore] = useState (false);
+    //const [showMore, setShowMore] = useState (false);
   
-    return (
+    {/*return (
       <>
         <div>
           <button onClick={() => setPageToRender("HomeListRender")}>HomeListRender</button>
           <button onClick= {() => setPageToRender("ApartmentDetails")}>ApartmentDetails</button>
-          <button onClick= {() => setPageToRender("FormCreateApartment")}>FormCreateApartment</button>
+          {/*<button onClick= {() => setPageToRender("FormCreateApartment")}>FormCreateApartment</button>
           <button onClick= {() => setPageToRender("ListWithForm")}>ListWithForm</button>
           <button onClick= {() => setPageToRender("CreateNewApartment")}>CreateNewApartment</button>
-          <button onClick= {() => setPageToRender("DeleteApartment")}>DeleteApartment</button>
-        </div>
+          <button onClick= {() => setPageToRender("DeleteApartment")}>DeleteApartment</button>*/
+        /*</div>}
   
-       {pageToRender === "HomeListRender" && <HomeListRender /> }
-       {pageToRender === "ApartmentDetails" && <ApartmentDetails /> }
-       {pageToRender === "FormCreateApartment" && <FormCreateApartment />}
-       {pageToRender === "ListWithForm" && <ListWithForm />}
-       {pageToRender === "CreateNewApartment" && <CreateNewApartment />}
-        {pageToRender === "DeleteApartment" && <DeleteApartment />}
-      </>
+        {/*{pageToRender === "HomeListRender" && (
+          <>
+            {console.log("Renderizando HomeListRender")}
+            <HomeListRender apartments={apartments} /> 
+          </>
+        )}*/
+        /*{pageToRender === "HomeListRender" && (
+          <div style={{color:"red"}}>TEST MENU FUNCIONA</div>
+        )}
+
+
+        {pageToRender === "ApartmentDetails" && (
+          <ApartmentDetails apartments={apartments}/> 
+        )}
+        {/*{pageToRender === "FormCreateApartment" && <FormCreateApartment />}
+        {pageToRender === "ListWithForm" && <ListWithForm />}
+        {pageToRender === "CreateNewApartment" && <CreateNewApartment />}
+        {pageToRender === "DeleteApartment" && <DeleteApartment />}*/
+      /*</>
     );
+}*/
+
+import { useState } from "react";
+import HomeListRender from "../components/HomeListRender";
+import ApartmentDetails from "../components/ApartmentDetails";
+
+export default function Menu() {
+  // Hook useState to manage the page to render 
+  const [pageToRender, setPageToRender] = useState("HomeListRender");
+
+  return (
+      <>
+        <h1>MENU WORKS CORRECTLY</h1>
+        <p>Paso 2: Add button to change the page </p>
+
+          <button onClick={() => setPageToRender("HomeListRender")}>
+            HomeListRender
+          </button>
+          <button onClick={() => setPageToRender("ApartmentDetails")}>
+            ApartmentDetails
+          </button>
+        <p>Page selected: {pageToRender} </p>
+      </>
+  );
 }
+
