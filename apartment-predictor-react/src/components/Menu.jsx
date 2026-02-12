@@ -66,7 +66,7 @@ export default function Menu() {
   return (
       <>
         <h1>MENU WORKS CORRECTLY</h1>
-        <p>Step 4: Pass real data 'apartments' to children components: HomeListRender & ApartmentDetails</p>
+        <p>Step 4: Pass real data 'apartments' to children component ApartmentDetails</p>
 
           <button onClick={() => setPageToRender("HomeListRender")}>
             HomeListRender
