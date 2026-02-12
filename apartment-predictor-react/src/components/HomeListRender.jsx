@@ -1,7 +1,6 @@
-import { apartments } from "../data/apartments";
 import CustomizedTables from "../ui/CustomizedTables"
 
-export default function HomeListRender() {
+export default function HomeListRender({ apartments }) {
 
     return (
         <>
