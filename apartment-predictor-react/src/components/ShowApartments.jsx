@@ -1,12 +1,12 @@
 //import { initialApartments } from "../data/apartments";
 import CustomizedTables from "../ui/CustomizedTables"
 
-export default function HomeListRender({ apartments = []}) {
+export default function ShowApartments({ apartments = []}) {
     console.log("Apartments en HomeListRender:", apartments);
     return (
         <>
-            <h1>Apartments</h1>
-            <p>This is an exercise to test react render</p>
+            <h2>Show Apartments</h2>
+            <p>Here you can see (READ) a table of all apartments</p>
             <CustomizedTables
                 apartments= {apartments}  
             />          

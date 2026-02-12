@@ -3,7 +3,7 @@ export default function Form({formData, handleChange, handleSubmit}) {
 
     return (
         <>
-          <h2>RegisterForm </h2>
+          <h3>Form </h3>
           <form onSubmit={handleSubmit}>
             
                 <label>

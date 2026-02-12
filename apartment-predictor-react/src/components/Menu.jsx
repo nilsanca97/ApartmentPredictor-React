@@ -53,7 +53,7 @@ import DeleteApartment from "../components/DeleteApartment";*/
 import { useState } from "react";
 import { initialApartments } from "../data/apartments";
 
-import HomeListRender from "../components/HomeListRender";
+import ShowApartments from "../components/ShowApartments";
 import ApartmentDetails from "../components/ApartmentDetails";
 import CreateNewApartment from "../components/CreateNewApartment";
 import DeleteApartment from "../components/DeleteApartment";
@@ -67,11 +67,11 @@ export default function Menu() {
 
   return (
       <>
-        <h1>MENU WORKS CORRECTLY</h1>
-        <p>Add new button DeleteApartment</p>
+        <h1>APARTMENT PREDICTOR WEB</h1>
+        <p>Click the following buttons to see the diferents functionalities of this web</p>
 
-          <button onClick={() => setPageToRender("HomeListRender")}>
-            HomeListRender
+          <button onClick={() => setPageToRender("ShowApartments")}>
+            ShowApartments
           </button>
           <button onClick={() => setPageToRender("ApartmentDetails")}>
             ApartmentDetails
@@ -85,8 +85,8 @@ export default function Menu() {
         <p>Page selected: {pageToRender} </p>
         
         {/* Conditional Render with PROPS */}
-        {pageToRender === "HomeListRender" && (
-          <HomeListRender apartments={apartments} />
+        {pageToRender === "ShowApartments" && (
+          <ShowApartments apartments={apartments} />
         )}
         {pageToRender === "ApartmentDetails" && (
           <ApartmentDetails apartments={apartments} />

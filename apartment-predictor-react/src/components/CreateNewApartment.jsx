@@ -42,6 +42,8 @@ export default function CreateNewApartment({apartments, setAparments}) {
   
   return (
     <>
+      <h2>CREATE NEW APARTMENT</h2>
+      <p>Field the form to create a new apartment</p>
       <Form 
         formData= {formData}
         handleChange= {handleChange}
