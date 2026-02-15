@@ -11,7 +11,7 @@ export default function Menu() {
   const [apartments, setApartments] = useState(initialApartments);
 
   // Hook useState to manage the page to render 
-  const [pageToRender, setPageToRender] = useState("HomeListRender");
+  const [pageToRender, setPageToRender] = useState("ShowApartments");
 
   return (
       <>

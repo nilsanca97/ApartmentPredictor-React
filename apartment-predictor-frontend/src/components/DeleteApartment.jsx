@@ -18,6 +18,7 @@ export default function DeleteApartment({apartments, setApartments}) {
             <button
               onClick={() => {
                 setApartments(apartments.filter((a) => a.id !== apartment.id));
+                alert('Are you sure you want to delete the apartment? If yes, click the "OK" button.')
               }}
             >
               Delete

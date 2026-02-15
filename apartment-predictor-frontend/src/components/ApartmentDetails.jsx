@@ -1,3 +1,5 @@
+import CustomizedCard from "../ui/CustomizedCard";
+
 export default function ApartmentDetails({ apartments = [] }) {
 
   return (
